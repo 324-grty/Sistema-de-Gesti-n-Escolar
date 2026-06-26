@@ -57,7 +57,7 @@ include ('../../app/controllers/usuarios/listado_de_usuarios.php');
                                     <th><center>Nro</center></th>
                                     <th><center>Nombres del usuario</center></th>
                                     <th><center>Rol</center></th>
-                                    <th><center>Email</center></th>
+                                    <th><center>Correo electrónico </center></th>
                                     <th><center>Fecha de creación</center></th>
                                     <th><center>Estado</center></th>
                                     <th><center>Acciones</center></th>

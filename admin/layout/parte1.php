@@ -143,7 +143,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="<?=APP_URL;?>/admin/configuraciones" class="nav-link active">
+                                <a href="<?=APP_URL;?>/admin/configuraciones" class="nav-link right">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Configurar</p>
                                 </a>
@@ -162,7 +162,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="<?=APP_URL;?>/admin/niveles" class="nav-link active">
+                                <a href="<?=APP_URL;?>/admin/niveles" class="nav-link right">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Listado de niveles</p>
                                 </a>
@@ -180,7 +180,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="<?=APP_URL;?>/admin/roles" class="nav-link active">
+                                <a href="<?=APP_URL;?>/admin/roles" class="nav-link right">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Listado de roles</p>
                                 </a>
@@ -198,7 +198,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="<?=APP_URL;?>/admin/usuarios" class="nav-link active">
+                                <a href="<?=APP_URL;?>/admin/usuarios" class="nav-link right">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Listado de usuarios</p>
                                 </a>
