@@ -143,7 +143,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="<?=APP_URL;?>/admin/configuraciones" class="nav-link right">
+                                <a href="<?=APP_URL;?>/admin/configuraciones" class="nav-link right"> <!-- para cambiar de color -->
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Configurar</p>
                                 </a>

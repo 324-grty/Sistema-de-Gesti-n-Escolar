@@ -48,8 +48,10 @@ include ('../../app/controllers/configuraciones/gestion/listado_de_gestiones.php
                                             <label for="">Niveles</label>
                                             <select name="nivel" id="" class="form-control">
                                                 <option value="INICIAL">INICIAL</option>
+                                                <option value="PREPRIMARIA">PREPRIMARIA</option>
                                                 <option value="PRIMARIA">PRIMARIA</option>
-                                                <option value="SECUNDARIA">SECUNDARIA</option>
+                                                <option value="BASICOS">BÁSICOS</option>
+                                                <option value="DIVERSIFICADO">DIVERSIFICADO</option>
                                             </select>
                                         </div>
                                     </div>

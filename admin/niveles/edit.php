@@ -53,9 +53,11 @@ include ('../../app/controllers/configuraciones/gestion/listado_de_gestiones.php
                                         <div class="form-group">
                                             <label for="">Niveles</label>
                                             <select name="nivel" id="" class="form-control">
-                                                <option value="INICIAL"<?php if($nivel=='INICIAL'){ ?> selected="selected" <?php } ?>>INICIAL</option>
-                                                <option value="PRIMARIA"<?php if($nivel=='PRIMARIA'){ ?> selected="selected" <?php } ?>>PRIMARIA</option>
-                                                <option value="SECUNDARIA"<?php if($nivel=='SECUNDARIA'){ ?> selected="selected" <?php } ?>>SECUNDARIA</option>
+                                                <option value="INICIAL" <?php if($nivel=='INICIAL'){ ?> selected="selected" <?php } ?>>INICIAL</option>
+                                                <option value="PREPRIMARIA" <?php if($nivel=='PREPRIMARIA'){ ?> selected="selected" <?php } ?>>PREPRIMARIA</option>
+                                                <option value="PRIMARIA" <?php if($nivel=='PRIMARIA'){ ?> selected="selected" <?php } ?>>PRIMARIA</option>
+                                                <option value="BASICOS" <?php if($nivel=='BASICOS'){ ?> selected="selected" <?php } ?>>BÁSICOS</option>
+                                                <option value="DIVERSIFICADO" <?php if($nivel=='DIVERSIFICADO'){ ?> selected="selected" <?php } ?>>DIVERSIFICADO</option>
                                             </select>
                                         </div>
                                     </div>

@@ -26,6 +26,31 @@ include ('../../../app/controllers/configuraciones/institucion/listado_de_instit
                             </div>
                         </div>
                         <div class="card-body">
+
+                            <style>
+                                table {
+                                    width: 100%;
+                                    border-collapse: collapse;
+                                    font-family: 'Segoe UI', sans-serif;
+                                    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                                }
+
+                                th {
+                                    background: #1f2937;
+                                    color: white;
+                                    padding: 15px;
+                                }
+
+                                td {
+                                    padding: 12px;
+                                    border-bottom: 1px solid #e5e7eb;
+                                }
+
+                                tr:hover {
+                                    background-color: #f3f4f6;
+                                }
+                            </style>
+
                             <table id="example1" class="table table-striped table-bordered table-hover table-sm">
                                 <thead>
                                 <tr>
@@ -35,7 +60,7 @@ include ('../../../app/controllers/configuraciones/institucion/listado_de_instit
                                     <th><center>Dirección</center></th>
                                     <th><center>Teléfono</center></th>
                                     <th><center>Celular</center></th>
-                                    <th><center>Correo electronico</center></th>
+                                    <th><center>Correo electrónico</center></th>
                                     <th><center>Fecha de creación</center></th>
                                     <th><center>Estado</center></th>
                                     <th><center>Acciones</center></th>
