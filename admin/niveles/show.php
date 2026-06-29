@@ -62,7 +62,7 @@ include ('../../app/controllers/niveles/datos_nivel.php');
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <label for="">Fecha y hora de creción</label>
+                                            <label for="">Estado</label>
                                             <p>
                                                 <?php
                                                 if($estado == "1") echo "ACTIVO";

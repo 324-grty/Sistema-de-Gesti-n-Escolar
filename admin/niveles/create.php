@@ -61,9 +61,9 @@ include ('../../app/controllers/configuraciones/gestion/listado_de_gestiones.php
                                         <div class="form-group">
                                             <label for="">Turnos</label>
                                             <select name="turno" id="" class="form-control">
-                                                <option value="MAÑANA">MAÑANA</option>
-                                                <option value="TARDE">TARDE</option>
-                                                <option value="NOCHE">NOCHE</option>
+                                                <option value="MATUTINA">MATUTINA</option>
+                                                <option value="VESPERTINA">VESPERTINA</option>
+                                                <option value="NOCTURNA">NOCTURNA</option>
                                             </select>
                                         </div>
                                     </div>

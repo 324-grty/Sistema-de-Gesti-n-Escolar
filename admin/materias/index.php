@@ -2,7 +2,7 @@
 include ('../../app/config.php');
 include ('../../admin/layout/parte1.php');
 
-include ('../../app/controllers/niveles/listado_de_niveles.php');
+include ('../../app/controllers/materias/listado_de_materias.php');
 
 ?>
 
@@ -12,7 +12,7 @@ include ('../../app/controllers/niveles/listado_de_niveles.php');
     <div class="content">
         <div class="container">
             <div class="row">
-                <h1>Listado de niveles</h1>
+                <h1>Listado de materias</h1>
             </div>
             <br>
             <div class="row">
@@ -20,9 +20,9 @@ include ('../../app/controllers/niveles/listado_de_niveles.php');
                 <div class="col-md-12">
                     <div class="card card-outline card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Niveles registrados</h3>
+                            <h3 class="card-title">Materias registrados</h3>
                             <div class="card-tools">
-                                <a href="create.php" class="btn btn-primary"><i class="bi bi-plus-square"></i> Crear nuevo nivel</a>
+                                <a href="create.php" class="btn btn-primary"><i class="bi bi-plus-square"></i> Crear nueva materia</a>
                             </div>
                         </div>
                         <div class="card-body">
@@ -55,45 +55,36 @@ include ('../../app/controllers/niveles/listado_de_niveles.php');
                                 <thead>
                                 <tr>
                                     <th><center>Nro</center></th>
-                                    <th><center>Gestión educativa</center></th>
-                                    <th><center>Nivel</center></th>
-                                    <th><center>Turno</center></th>
+                                    <th><center>Materia</center></th>
                                     <th><center>Estado</center></th>
                                     <th><center>Acciones</center></th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <?php
-                                $contador_niveles = 0;
-                                foreach ($niveles as $nivele){
-                                    $id_nivel = $nivele['id_nivel'];
-                                    $contador_niveles = $contador_niveles +1; ?>
+                                $contador_materias = 0;
+                                foreach ($materias as $materia){
+                                    $id_materia = $materia['id_materia'];
+                                    $contador_materias = $contador_materias +1; ?>
                                     <tr>
-                                        <td style="text-align: center"><?=$contador_niveles;?></td>
-                                        <td><?=$nivele['gestion'];?></td>
-                                        <td><?=$nivele['nivel'];?></td>
-                                        <td><?=$nivele['turno'];?></td>
-                                        <td style="text-align: center">
+                                        <td style="text-align: center"><?=$contador_materias;?></td>
+                                        <td style="text-align: center;"><?=$materia['nombre_materia'];?></td>
+                                        <td style="text-align: center;">
                                             <?php
-                                            if($nivele['estado'] == "1"){ ?>
-                                                <button class="btn btn-success btn-sm" style="border-radius: 20px">ACTIVO</button>
-                                                <?php
-                                            }else{ ?>
-                                                <button class="btn btn-danger btn-sm" style="border-radius: 20px">INACTIVO</button>
-                                                <?php
-                                            }
+                                            if($materia['estado']=="1") echo "ACTIVO";
+                                            else echo "INACTIVO";
                                             ?>
                                         </td>
                                         <td style="text-align: center">
                                             <div class="btn-group" role="group" aria-label="Basic example">
-                                                <a href="show.php?id=<?=$id_nivel;?>" type="button" class="btn btn-info btn-sm"><i class="bi bi-eye"></i></a>
-                                                <a href="edit.php?id=<?=$id_nivel;?>" type="button" class="btn btn-success btn-sm"><i class="bi bi-pencil"></i></a>
-                                               <!-- <form action="<?=APP_URL;?>/app/controllers/niveles/delete.php" onclick="preguntar<?=$id_nivel;?>(event)" method="post" id="miFormulario<?=$id_nivel;?>">
-                                                    <input type="text" name="id_nivel" value="<?=$id_nivel;?>" hidden>
+                                                <a href="show.php?id=<?=$id_materia;?>" type="button" class="btn btn-info btn-sm"><i class="bi bi-eye"></i></a>
+                                                <a href="edit.php?id=<?=$id_materia;?>" type="button" class="btn btn-success btn-sm"><i class="bi bi-pencil"></i></a>
+                                                <form action="<?=APP_URL;?>/app/controllers/materias/delete.php" onclick="preguntar<?=$id_materia;?>(event)" method="post" id="miFormulario<?=$id_materia;?>">
+                                                    <input type="text" name="id_materia" value="<?=$id_materia;?>" hidden>
                                                     <button type="submit" class="btn btn-danger btn-sm" style="border-radius: 0px 5px 5px 0px"><i class="bi bi-trash"></i></button>
                                                 </form>
                                                 <script>
-                                                    function preguntar<?=$id_nivel;?>(event) {
+                                                    function preguntar<?=$id_materia;?>(event) {
                                                         event.preventDefault();
                                                         Swal.fire({
                                                             title: 'Eliminar registro',
@@ -106,13 +97,12 @@ include ('../../app/controllers/niveles/listado_de_niveles.php');
                                                             denyButtonText: 'Cancelar',
                                                         }).then((result) => {
                                                             if (result.isConfirmed) {
-                                                                var form = $('#miFormulario<?=$id_nivel;?>');
+                                                                var form = $('#miFormulario<?=$id_materia;?>');
                                                                 form.submit();
                                                             }
                                                         });
                                                     }
                                                 </script>
-                                                -->
                                             </div>
                                         </td>
                                     </tr>
@@ -145,12 +135,12 @@ include ('../../layout/mensajes.php');
             "pageLength": 5,
             "language": {
                 "emptyTable": "No hay información",
-                "info": "Mostrando _START_ a _END_ de _TOTAL_ Niveles",
-                "infoEmpty": "Mostrando 0 a 0 de 0 Niveles",
-                "infoFiltered": "(Filtrado de _MAX_ total Niveles)",
+                "info": "Mostrando _START_ a _END_ de _TOTAL_ Materias",
+                "infoEmpty": "Mostrando 0 a 0 de 0 Materias",
+                "infoFiltered": "(Filtrado de _MAX_ total Materias)",
                 "infoPostFix": "",
                 "thousands": ",",
-                "lengthMenu": "Mostrar _MENU_ Niveles",
+                "lengthMenu": "Mostrar _MENU_ Materias",
                 "loadingRecords": "Cargando...",
                 "processing": "Procesando...",
                 "search": "Buscador:",
